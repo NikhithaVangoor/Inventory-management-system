@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signup Form</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+            font-family: 'Baloo Bhai', cursive;
+            color: black;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            height: 100%;
+            background-image: url('signupimg.jpg'); /* Replace 'background_image.jpg' with the path to your background image */
+            background-size: cover;
+            background-position: center;
+        }
+  </style>
+</head>
+<body>
+  <center>
+  <section class="wrapper">
+    <div class="form signup">
+      <header>SignUp as Supplier</header>
+      <form action="supplier_signup.php" method="post">
+        <input type="text"placeholder="Full name" name="User_name" required>
+        <input type="text" placeholder="Login Id" name="Login_Id" required>
+        <input type="password" placeholder="Password" name="Password" required>
+        <input type="tel" placeholder="Mobile number" maxlength="10" name="Mobile" required>
+        <!-- <input type="text" placeholder="ID proof" required> -->
+        <div class="buttons">
+          <input type="submit" value="Signup" class="signup-button">
+          <input type="reset" value="Reset" class="reset-button">
+        </div>
+      </form>
+    </div>
+    
+    <div class="form signup signup-second">
+      <header>SignUp as Customer</header>
+      <form action="customer_signup.php" method="post">
+        <input type="text" placeholder="Full name" name="User_name" required>
+        <input type="text" placeholder="Login Id" name="Login_Id" required>
+        <input type="password" placeholder="Password" name="Password" required>
+        <input type="tel" placeholder="Mobile number" maxlength="10" name="Mobile" required>
+        <!-- <input type="text" placeholder="ID proof" maxlength="15" name="id_proof" required> -->
+        <div class="buttons">
+          <input type="submit" value="Signup" class="signup-button">
+          <input type="reset" value="Reset" class="reset-button">
+        </div>
+      </form>
+    </div>
+  </section>
+  </center>
+</body>
+</html>

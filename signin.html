@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signin Form</title>
+  <style>
+    body {
+            font-family: 'Baloo Bhai', cursive;
+            color: black;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            height: 100%;
+            background-image: url('signinimg.jpg'); /* Replace 'background_image.jpg' with the path to your background image */
+            background-size: cover;
+            background-position: center;
+        }
+    
+
+    .wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .form {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      width: 300px;
+    }
+
+    .form header {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .form input[type="text"],
+    .form input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    .form input[type="submit"],
+    .form input[type="reset"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border: none;
+      border-radius: 4px;
+      background-color: #007bff;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .form input[type="submit"]:hover,
+    .form input[type="reset"]:hover {
+      background-color: #0056b3;
+    }
+
+    .form .line {
+      margin: 20px 0;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .signup-link {
+      text-align: center;
+    }
+
+    .signup-link a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    .signup-link a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <section class="wrapper">
+    <div class="form signin">
+      <header>Signin as Supplier</header>
+      <form action="supplier_signin.php" method="post">
+        <label for="supplier_login_id">Login ID:</label>
+        <input type="text" id="supplier_login_id" name="Login_Id" placeholder="Enter your login ID" required />
+        
+        <label for="supplier_password">Password:</label>
+        <input type="password" id="supplier_password" name="Password" placeholder="Enter your password" required />
+        
+        <div class="button-group">
+          <input type="submit" value="Sign in" class="button primary" />
+          <input type="reset" value="Reset" class="button" />
+        </div>
+      </form>
+      <div class="line"></div>
+      <div class="signup-link">
+        <p>Don't have an account? <a href="signup.html">Sign up here</a></p>
+      </div>
+    </div>
+    
+    <div class="form signin signin-second">
+      <header>Signin as Customer</header>
+      <form action="customer_signin.php" method="post">
+        <label for="customer_login_id">Login ID:</label>
+        <input type="text" id="customer_login_id" name="Login_Id" placeholder="Enter your login ID" required />
+        
+        <label for="customer_password">Password:</label>
+        <input type="password" id="customer_password" name="Password" placeholder="Enter your password" required />
+        
+        <div class="button-group">
+          <input type="submit" value="Sign in" class="button primary" />
+          <input type="reset" value="Reset" class="button" />
+        </div>
+      </form>
+      <div class="line"></div>
+      <div class="signup-link">
+        <p>Don't have an account? <a href="signup.html">Sign up here</a></p>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
